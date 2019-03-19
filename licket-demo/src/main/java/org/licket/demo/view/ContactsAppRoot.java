@@ -4,6 +4,8 @@ import org.licket.core.view.ComponentActionCallback;
 import org.licket.core.view.ComponentFunctionCallback;
 import org.licket.core.view.container.AbstractLicketMultiContainer;
 import org.licket.core.view.hippo.vue.annotation.LicketMountPoint;
+import org.licket.core.view.hippo.vue.annotation.LicketSecurity;
+import org.licket.core.view.hippo.vue.annotation.LicketSecurityType;
 import org.licket.core.view.link.AbstractLicketActionLink;
 import org.licket.core.view.link.AbstractLicketLink;
 import org.licket.core.view.mount.params.MountingParams;
@@ -17,6 +19,7 @@ import static org.licket.core.model.LicketComponentModel.emptyComponentModel;
 import static org.licket.core.view.LicketComponentView.fromComponentClass;
 
 @LicketMountPoint("/")
+@LicketSecurity(LicketSecurityType.USER_AND_ADMIN)
 public class ContactsAppRoot extends AbstractLicketMultiContainer<Void> {
 
     @Autowired

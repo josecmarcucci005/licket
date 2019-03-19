@@ -3,6 +3,7 @@ dependencies {
 exclude(module: 'spring-boot-starter-tomcat')
     }
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-jetty', version:'1.4.0.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version:'1.4.0.RELEASE'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version:'2.5.0'
     compile group: 'net.jodah', name: 'typetools', version:'0.4.7'
   compile project(':licket-framework')

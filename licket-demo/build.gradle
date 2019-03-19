@@ -1,3 +1,17 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath('org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE')
+    }
+}
+
+
+apply plugin: 'org.springframework.boot'
+
 dependencies {
     compile group: 'com.github.javafaker', name: 'javafaker', version:'0.10'
+    compile('org.springframework.boot:spring-boot-starter-web')
+    
 }

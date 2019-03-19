@@ -2,6 +2,8 @@ package org.licket.core.view;
 
 import org.licket.core.id.CompositeId;
 import org.licket.core.model.LicketComponentModel;
+import org.licket.core.view.hippo.vue.annotation.LicketSecurity;
+import org.licket.core.view.hippo.vue.annotation.LicketSecurityType;
 import org.licket.core.view.hippo.vue.extend.VueClass;
 import org.licket.core.view.render.ComponentRenderingContext;
 
@@ -11,6 +13,7 @@ import java.util.function.Predicate;
 /**
  * @author activey
  */
+@LicketSecurity(LicketSecurityType.NO_ROLE)
 public interface LicketComponent<TYPE> extends VueClass {
 
     LicketComponentView getView();

@@ -2,13 +2,10 @@ package org.licket.demo.licket;
 
 import org.licket.core.model.LicketComponentModel;
 import org.licket.core.resource.Resource;
+import org.licket.core.view.hippo.vue.annotation.LicketAuthentication;
+import org.licket.core.view.hippo.vue.annotation.LicketAuthenticationType;
 import org.licket.demo.resource.ApplicationCssResource;
-import org.licket.demo.view.AddContactForm;
-import org.licket.demo.view.AddContactPanel;
-import org.licket.demo.view.ContactsAppRoot;
-import org.licket.demo.view.ContactsList;
-import org.licket.demo.view.ContactsPanel;
-import org.licket.demo.view.ViewContactPanel;
+import org.licket.demo.view.*;
 import org.licket.semantic.SemanticUIPluginConfiguration;
 import org.licket.semantic.component.modal.ModalSettings;
 import org.licket.spring.annotation.LicketComponent;
@@ -23,6 +20,7 @@ import static org.licket.semantic.component.modal.ModalSettingsBuilder.builder;
 
 @Configuration
 @Import(SemanticUIPluginConfiguration.class)
+@LicketAuthentication(LicketAuthenticationType.DEFAULT)
 public class LicketConfiguration {
 
     @LicketRootContainer
@@ -57,6 +55,11 @@ public class LicketConfiguration {
     @LicketComponent
     public AddContactPanel addContactPanel() {
         return new AddContactPanel("add-contact-panel", modalDialogSettings());
+    }
+
+    @LicketComponent
+    public LicketHello addLicketHello() {
+      return new LicketHello("licket-hello");
     }
 
     @Bean
