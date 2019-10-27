@@ -3,7 +3,6 @@ package org.licket.demo.licket;
 import org.licket.core.model.LicketComponentModel;
 import org.licket.core.resource.Resource;
 import org.licket.demo.resource.ApplicationCssResource;
-import org.licket.demo.resource.ApplicationImageResource;
 import org.licket.demo.view.*;
 import org.licket.semantic.SemanticUIPluginConfiguration;
 import org.licket.semantic.component.modal.ModalSettings;
@@ -65,8 +64,4 @@ public class LicketConfiguration {
         return new ApplicationCssResource();
     }
 
-    @Bean
-    public Resource applicationImageResource() {
-        return new ApplicationImageResource();
-    }
 }
