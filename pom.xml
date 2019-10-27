@@ -176,6 +176,7 @@
         <module>licket-framework-surface</module>
         <module>licket-spring-autoconfigure</module>
         <module>licket-demo</module>
+        <module>licket-demo-shop</module>
         <module>licket-framework-hippo</module>
         <module>licket-npm-libraries</module>
         <module>licket-module-semanticui</module>

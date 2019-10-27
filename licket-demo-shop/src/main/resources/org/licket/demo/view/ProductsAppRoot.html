@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:lick="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>OrganicToys</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="https://raw.githubusercontent.com/josecmarcucci005/ecommerce_pictures/master/logo.png" />
+    </head>
+    <body>
+        <div>
+            <div class="ui fixed inverted menu">
+                <div class="left item">
+                    <a class="ui item">
+                        <i class="teal large icon home"/>
+                        Home
+                    </a>
+                </div>
+                <div class="right menu">
+                    <a class="ui item">
+                        <i class="teal large icon cart arrow down"/>
+                        Shopping cart
+                    </a>
+                    <!--
+                    <div class="ui button" lick:id="view-account">
+                        <i class="icon user outline"></i>
+                        My Account
+                    </div>
+                    -->
+                    <a class="ui item" lick:id="view-account">
+                        <i class="teal large icon user outline" />
+                        My Account
+                    </a>
+                </div>
+            </div>
+            <div class="ui container">
+                <div class="ui centered grid">
+                    <div class="row">
+                        <img class="ui small circular centered image"
+                             src="https://raw.githubusercontent.com/josecmarcucci005/ecommerce_pictures/master/logo.png" />
+                    </div>
+                </div>
+                <div class="ui stackable grid">
+                    <div class="two column row">
+                        <div class="left floated column">
+                            <div class="ui container" lick:id="view-account-panel" >
+                                <div lick:id="account-modal"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="ui fluid image">
+                            <img src="https://raw.githubusercontent.com/josecmarcucci005/ecommerce_pictures/master/background.jpg" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <transition-group name="list" class="ui five stackable cards" tag="div" lick:id="products-panel">
+                            <div class="list-item card" lick:id="product">
+                                <div class="image">
+                                    <img lick:id="pictureUrl"/>
+                                </div>
+                                <div class="content">
+                                    <div class="header" lick:id="name">Product name</div>
+                                </div>
+
+                                <div class="ui bottom attached button">
+                                    <i class="add icon"></i>
+                                    Add to Cart
+                                </div>
+                                <div class="ui bottom attached button" lick:id="view-product">
+                                    <i class="search icon"></i>
+                                    Product details
+                                </div>
+                            </div>
+                        </transition-group>
+                    </div>
+                </div>
+            </div>
+            <div class="ui inverted vertical footer segment">
+                <div class="ui center aligned container">
+                    <div class="ui stackable inverted divided grid">
+                            <div class="six wide column">
+                                <h4 class="ui inverted header">Contacts Us</h4>
+                                <div class="ui inverted link list">
+                                    <a class="ui item">
+                                        <i class="teal envelope outline icon"/>
+                                        info@organictoys.com
+                                    </a>
+                                    <a class="ui item">
+                                        <i class="teal phone square icon "/>
+                                        +1 800 222 333
+                                    </a>
+                                    <a class="ui item">
+                                        <i class="teal skype icon"/>
+                                        organicToys005
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="five wide column">
+                                <h4 class="ui inverted header">Payment</h4>
+                                <div class="ui inverted link list">
+                                    <a class="ui item">
+                                        <i class="teal envelope outline icon "/>
+                                        info@organictoys.com
+                                    </a>
+                                    <a class="ui item">
+                                        <i class="teal phone square icon"/>
+                                        +1 800 222 333
+                                    </a>
+                                    <a class="ui item">
+                                        <i class="teal skype icon "/>
+                                        organicToys005
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="five wide column">
+                                <h4 class="ui inverted header">Delivery</h4>
+                                <div class="ui inverted link list">
+                                    <a href="#" class="item">Link One</a>
+                                    <a href="#" class="item">Link Two</a>
+                                    <a href="#" class="item">Link Three</a>
+                                    <a href="#" class="item">Link Four</a>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="ui inverted section divider"></div>
+                    <div class="ui centered grid">
+                        <div class="row">
+                            <a class="ui item">
+                                <i class="large icon facebook square"/>
+                                <i class="large icon twitter square"/>
+                                <i class="large icon instagram"/>
+                                <i class="large icon youtube square"/>
+                            </a>
+                        </div>
+                        <div class="ui horizontal inverted small divided link list">
+                            <a class="item" href="#">Site Map</a>
+                            <a class="item" href="#">Terms and Conditions</a>
+                            <a class="item" href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div lick:id="dimmer"></div>
+        </div>
+    </body>
+</html>

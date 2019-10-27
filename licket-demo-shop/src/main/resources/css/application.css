@@ -1,0 +1,44 @@
+.ui.list-item.card, .ui.cards>.list-item.card {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+.ui.list-leave-active.card, .ui.cards>.list-leave-active.card {
+  position: absolute;
+}
+
+#products-panel {
+    width: 100%;
+    padding: 0em 5em;
+}
+
+#products-page {
+    margin-top: 5em;
+}
+
+#products-page .dimmable {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.ui.footer.segment {
+    margin: 5em 0em 0em;
+    padding: 5em 0em;
+    flex: 1;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.ui.image {
+  /* Set a specific height */
+  height: 100px;
+  width: 100%;
+
+}
