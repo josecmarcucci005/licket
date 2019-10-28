@@ -8,16 +8,22 @@
     <body>
         <div>
             <div class="ui fixed inverted menu">
-                <div class="left item">
+                <div class="left menu">
                     <a class="ui item">
                         <i class="teal large icon home"/>
                         Home
                     </a>
                 </div>
                 <div class="right menu">
+                    <div class="item">
+                        <div class="ui icon input">
+                            <input type="text" placeholder="Search..." />
+                            <i class="search icon"></i>
+                        </div>
+                    </div>
                     <a class="ui item">
                         <i class="teal large icon cart arrow down"/>
-                        Shopping cart
+                        Shopping cart: (Empty)
                     </a>
                     <!--
                     <div class="ui button" lick:id="view-account">
@@ -52,32 +58,53 @@
                         </div>
                     </div>
                     <div class="row">
-                        <transition-group name="list" class="ui five stackable cards" tag="div" lick:id="products-panel">
-                            <div class="list-item card" lick:id="product">
-                                <div class="image">
-                                    <img lick:id="pictureUrl"/>
-                                </div>
-                                <div class="content">
-                                    <div class="header" lick:id="name">Product name</div>
-                                </div>
-
-                                <div class="ui bottom attached button">
-                                    <i class="add icon"></i>
-                                    Add to Cart
-                                </div>
-                                <div class="ui bottom attached button" lick:id="view-product">
-                                    <i class="search icon"></i>
-                                    Product details
-                                </div>
+                        <div class="four wide column">
+                            <div class="ui vertical pointing menu">
+                                <a class="item active">
+                                    Wool Toys
+                                </a>
+                                <a class="item">
+                                    Wooden Toys
+                                </a>
+                                <a class="item">
+                                    Learning Toys
+                                </a>
                             </div>
-                        </transition-group>
+                        </div>
+                        <div class="twelve wide column">
+                            <transition-group name="list" class="ui four stackable cards" tag="div" lick:id="products-panel">
+                                <div class="list-item card" lick:id="product">
+                                    <div class="image">
+                                        <img lick:id="pictureUrl"/>
+                                    </div>
+                                    <div class="content">
+                                        <div class="header" lick:id="name">Product name</div>
+                                    </div>
+
+                                    <div class="ui bottom">
+                                        <label class="ui teal right ribbon label">
+                                            <div class="description" lick:id="price">Product Price</div>
+                                        </label>
+                                    </div>
+
+                                    <div class="ui bottom attached button">
+                                        <i class="add icon"></i>
+                                        Add to Cart
+                                    </div>
+                                    <div class="ui bottom attached button" lick:id="view-product">
+                                        <i class="search icon"></i>
+                                        Product details
+                                    </div>
+                                </div>
+                            </transition-group>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="ui inverted vertical footer segment">
                 <div class="ui center aligned container">
                     <div class="ui stackable inverted divided grid">
-                            <div class="six wide column">
+                            <div class="five wide column">
                                 <h4 class="ui inverted header">Contacts Us</h4>
                                 <div class="ui inverted link list">
                                     <a class="ui item">
@@ -94,31 +121,19 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="five wide column">
+                            <div class="six wide column">
                                 <h4 class="ui inverted header">Payment</h4>
-                                <div class="ui inverted link list">
-                                    <a class="ui item">
-                                        <i class="teal envelope outline icon "/>
-                                        info@organictoys.com
-                                    </a>
-                                    <a class="ui item">
-                                        <i class="teal phone square icon"/>
-                                        +1 800 222 333
-                                    </a>
-                                    <a class="ui item">
-                                        <i class="teal skype icon "/>
-                                        organicToys005
-                                    </a>
-                                </div>
+                                <a class="ui item">
+                                    <i class="large icon paypal square"/>
+                                    <i class="large icon bitcoin square"/>
+                                    <i class="large icon visa"/>
+                                    <i class="large icon mastercard"/>
+                                </a>
                             </div>
                             <div class="five wide column">
                                 <h4 class="ui inverted header">Delivery</h4>
-                                <div class="ui inverted link list">
-                                    <a href="#" class="item">Link One</a>
-                                    <a href="#" class="item">Link Two</a>
-                                    <a href="#" class="item">Link Three</a>
-                                    <a href="#" class="item">Link Four</a>
-                                </div>
+                                <img class="ui tiny centered image"
+                                     src="http://pluspng.com/img-png/dhl-png-file-dhl-logo-svg-1280.png" />
                             </div>
                     </div>
                     <div class="ui inverted section divider"></div>

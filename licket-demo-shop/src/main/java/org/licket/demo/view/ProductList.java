@@ -24,6 +24,7 @@ public class ProductList extends AbstractLicketList {
         add(new LicketImage("pictureUrl"));
         add(new LicketLabel("name"));
         add(new LicketLabel("description"));
+        add(new LicketLabel("price"));
         add(new MountedComponentLink<Product>("view-product", ViewProductPanel.class) {
             @Override
             protected void aggregateParams(MountingParamsAggregator paramsAggregator) {

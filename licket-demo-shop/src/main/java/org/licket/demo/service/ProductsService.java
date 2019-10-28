@@ -61,7 +61,9 @@ public class ProductsService {
             double max = 35.00;
             double rand = new Random().nextDouble();
 
-            product.setPrice(min + (rand * (max - min)));
+            Double result = min + (rand * (max - min));
+
+            product.setPrice("$" + String.format("%.2f", result));
             product.setId(idGenerator.generateId().toString());
             product.setName(url.substring(url.lastIndexOf("/")+1, url.lastIndexOf(".")).toUpperCase());
 
